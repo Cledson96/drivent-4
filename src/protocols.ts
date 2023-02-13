@@ -1,3 +1,5 @@
+import { Room } from "@prisma/client";
+
 export type ApplicationError = {
   name: string;
   message: string;
@@ -11,6 +13,11 @@ export type ViaCEPAddress = {
   uf: string,
 
 };
+
+export type RoomUser = {
+  id: number;
+  Room: Room;
+}
 
 //Regra de Negócio
 export type AddressEnrollment = {
